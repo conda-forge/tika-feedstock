@@ -1,7 +1,7 @@
 {%set name = "tika" %}
-{%set version = "1.14" %}
+{%set version = "1.14.1" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "726aa26d5a75aa521dd6626fa62f144f64647ae731a8fad37dc6c39d1791951e" %}
+{%set hash_val = "d84381b1fbe8de51e76651fbcde770f2bd2ccad12d39205324e49dd8fc8c6768" %}
 
 package:
   name: {{ name }}
