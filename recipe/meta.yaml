@@ -1,23 +1,25 @@
-{%set name = "tika" %}
-{%set version = "1.14" %}
-{%set hash_type = "sha256" %}
-{%set hash_val = "726aa26d5a75aa521dd6626fa62f144f64647ae731a8fad37dc6c39d1791951e" %}
+{% set name = "tika" %}
+{% set version = "1.14.1" %}
+{% set compress_type = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash = "d84381b1fbe8de51e76651fbcde770f2bd2ccad12d39205324e49dd8fc8c6768" %}
+{% set build = 0 %}
 
 package:
-  name: {{ name }}
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  {{ hash_type }}: {{ hash_val }}
+  fn: {{ name }}-{{ version }}.{{ compress_type }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
+  {{ hash_type }}: {{ hash }}
 
 build:
   preserve_egg_dir: True
   entry_points:
     - tika-python = tika.tika:main
 
-  number: 0
+  number: {{ build }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
@@ -40,8 +42,12 @@ test:
 
 about:
   home: http://github.com/chrismattmann/tika-python
+  license_file: LICENSE.txt
   license: Apache 2.0
+  license_family: Apache
   summary: 'Apache Tika Python library'
+  doc_url: https://github.com/chrismattmann/tika-python
+  dev_url: https://github.com/chrismattmann/tika-python
 
 extra:
   recipe-maintainers:
