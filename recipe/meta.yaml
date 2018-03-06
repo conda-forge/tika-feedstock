@@ -1,8 +1,8 @@
 {% set name = "tika" %}
-{% set version = "1.15" %}
+{% set version = "1.16" %}
 {% set compress_type = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "41dd030375c4c5d6dfc24f0626ff1ccd57e6bac9f123c2bca33e3586993ed441" %}
+{% set hash = "2c11354d779dd40901a331a0d75369bbd5167b10b36c8d0f65dbbcc4cba9660f" %}
 {% set build = 0 %}
 
 package:
@@ -19,7 +19,7 @@ build:
   entry_points:
     - tika-python = tika.tika:main
 
-  number: {{ build }}
+  number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
