@@ -14,14 +14,15 @@ Summary: Apache Tika Python library
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/tika-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/tika-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/tika-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/tika-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/tika-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/tika-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/tika-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/tika-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/tika/badges/version.svg)](https://anaconda.org/conda-forge/tika)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/tika/badges/downloads.svg)](https://anaconda.org/conda-forge/tika)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-tika-green.svg)](https://anaconda.org/conda-forge/tika) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/tika.svg)](https://anaconda.org/conda-forge/tika) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/tika.svg)](https://anaconda.org/conda-forge/tika) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/tika.svg)](https://anaconda.org/conda-forge/tika) |
 
 Installing tika
 ===============
