@@ -1,9 +1,9 @@
 {% set name = "tika" %}
-{% set version = "1.16" %}
+{% set version = "1.18" %}
 {% set compress_type = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "2c11354d779dd40901a331a0d75369bbd5167b10b36c8d0f65dbbcc4cba9660f" %}
-{% set build = 1 %}
+{% set hash = "9dc96187e15eca6b90ed9356e0d4c1be173fc1111e0b607af2117134a964cd5c" %}
+{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
@@ -20,7 +20,7 @@ build:
   entry_points:
     - tika-python = tika.tika:main
 
-  number: 1
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
