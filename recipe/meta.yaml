@@ -3,7 +3,6 @@
 {% set compress_type = "tar.gz" %}
 {% set hash_type = "sha256" %}
 {% set hash = "9dc96187e15eca6b90ed9356e0d4c1be173fc1111e0b607af2117134a964cd5c" %}
-{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +10,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.{{ compress_type }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
   {{ hash_type }}: {{ hash }}
 
 build:
@@ -19,15 +18,13 @@ build:
   preserve_egg_dir: True
   entry_points:
     - tika-python = tika.tika:main
-
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   host:
     - pip
     - python
-    - setuptools
 
   run:
     - python
