@@ -1,8 +1,7 @@
 {% set name = "tika" %}
-{% set version = "1.23.1" %}
+{% set version = "1.24" %}
 {% set compress_type = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash = "45069543c0d1943b5574b0aebf85121a0c8a05d82988c3d6e73baa0cfee2a037" %}
+{% set hash = "c2c50f405622f74531841104f9e85c17511aede11de8e5385eab1a29a31f191b" %}
 
 package:
   name: {{ name|lower }}
@@ -11,15 +10,15 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ compress_type }}
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
-  {{ hash_type }}: {{ hash }}
+  sha256: {{ hash }}
 
 build:
   noarch: python
-  preserve_egg_dir: True
+  preserve_egg_dir: true
   entry_points:
     - tika-python = tika.tika:main
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   host:
@@ -44,7 +43,7 @@ about:
   license_file: LICENSE.txt
   license: Apache 2.0
   license_family: Apache
-  summary: 'Apache Tika Python library'
+  summary: Apache Tika Python library
   doc_url: https://github.com/chrismattmann/tika-python
   dev_url: https://github.com/chrismattmann/tika-python
 
