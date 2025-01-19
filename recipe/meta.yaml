@@ -17,20 +17,22 @@ build:
   preserve_egg_dir: true
   entry_points:
     - tika-python = tika.tika:main
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   host:
     - pip
-    - python
+    - python {{ python_min }}
 
   run:
-    - python
+    - python >={{ python_min }}
     - setuptools
     - requests
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - tika
     - tika.tests
