@@ -1,7 +1,7 @@
 {% set name = "tika" %}
-{% set version = "3.1.0" %}
+{% set version = "3.3.2" %}
 {% set compress_type = "tar.gz" %}
-{% set hash = "4c3a404c3d846437c942d6a6fd7b71d50285690fae5489aa8a6f00ff9ccd0fc7" %}
+{% set hash = "468a5302249162351f65cfe05632d3869c0350d726aef82a75e7b04fa5cac8ab" %}
 
 package:
   name: {{ name|lower }}
