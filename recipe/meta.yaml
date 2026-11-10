@@ -1,7 +1,7 @@
 {% set name = "tika" %}
-{% set version = "3.3.2" %}
+{% set version = "3.4.0" %}
 {% set compress_type = "tar.gz" %}
-{% set hash = "468a5302249162351f65cfe05632d3869c0350d726aef82a75e7b04fa5cac8ab" %}
+{% set hash = "5e8abcf100a612553a7b3167dd0811dfd7061de48b663b591e98131f7387b653" %}
 
 package:
   name: {{ name|lower }}
@@ -9,7 +9,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.{{ compress_type }}
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
   sha256: {{ hash }}
 
 build:
